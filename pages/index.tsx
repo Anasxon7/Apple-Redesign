@@ -13,7 +13,7 @@ const Home = ({ categories}: Props) => {
   console.log(categories);
   
   return (
-    <div>
+    <div className='relative'>
       <Head>
         <title>Apple Redesign</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,9 +21,6 @@ const Home = ({ categories}: Props) => {
       
       <Header />
 
-      <main className='relative h-[200vh] bg-[#e7ecee]'> 
-        <Landing />
-      </main>
       
       <section className='relative z-40 -mt-[100vh] min-h-screen bg-[#181818]'>
         <div className='py-16 space-y-10'>
@@ -78,18 +75,18 @@ export default Home
 //   };
 // }
 
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
-) => {
-  const categories = await fetchCategories();
-  // const products = await fetchProducts();
-  // const session = await getSession(context);
+// export const getServerSideProps: GetServerSideProps<Props> = async (
+//   context
+// ) => {
+//   const categories = await fetchCategories();
+//   // const products = await fetchProducts();
+//   // const session = await getSession(context);
 
-  return {
-    props: {
-      categories,
-      // products,
-      // session,
-    },
-  };
-};
+//   return {
+//     props: {
+//       categories,
+//       // products,
+//       // session,
+//     },
+//   };
+// };
