@@ -21,6 +21,9 @@ const Home = ({ categories}: Props) => {
       
       <Header />
 
+      <main className='relative h-[200vh] bg-[#e7ecee]'> 
+        <Landing />
+      </main>
       
       <section className='relative z-40 -mt-[100vh] min-h-screen bg-[#181818]'>
         <div className='py-16 space-y-10'>
